@@ -1,0 +1,90 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url("https://netsheetcalc.com/wp-content/uploads/sites/185/2021/01/pexels-karolina-grabowska-5412081-1.jpg");
+  background-position: center;
+  background-size: cover;
+
+  
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 360px;
+  background: #040404;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(236, 234, 234, 0.923);
+  padding: 20px;
+  text-align: center;
+}
+
+#display {
+  width: calc(100% - 20px);
+  height: 60px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: right;
+  border: none;
+  background: #eaeaea;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #70c7ed;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button.operator {
+  background-color: #f107ab;
+  color: white;
+}
+
+button.operator:hover {
+  background-color: #f684d6;
+}
+
+button.clear {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+button.clear:hover {
+  background-color: #e60000;
+}
+
+button:last-child {
+  grid-column: span 2; /* Makes the "=" button span two columns */
+  background-color: #4caf50;
+  color: white;
+}
